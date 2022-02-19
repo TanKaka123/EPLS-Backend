@@ -22,7 +22,7 @@ app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
 // set up port number
-const port = 3000;
+const port =process.env.PORT ||  3000;
 // set up home route
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
