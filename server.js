@@ -88,4 +88,4 @@ setInterval(()=>{
 setInterval(()=>{
   const handleRecordApi = require('./utils/handleRecord');    
   const handleScoresApi = require('./utils/handleScores'); 
-},twelveHour+60000);
+},twelveHour);
