@@ -31,15 +31,20 @@ const filterMatch = (match) => {
             const A = $(el).find(" .standing-table__cell:nth-child(8)").text();
             const GD = $(el).find(" .standing-table__cell:nth-child(9)").text();
             const Pts = $(el).find(" .standing-table__cell:nth-child(10)").text();
-            let match1 = $(el).find(" span:nth-child(1)").attr("class");
+            let match1='';
+            match1 = $(el).find(" span:nth-child(2)").attr("class");
             match1 = filterMatch(match1);
-            let match2 = $(el).find(" span:nth-child(2)").attr("class");
+            let match2=''; 
+            match2 = $(el).find(" span:nth-child(3)").attr("class");
             match2 = filterMatch(match2);
-            let match3 = $(el).find(" span:nth-child(3)").attr("class");
+            let match3=''; 
+            match3 = $(el).find(" span:nth-child(4)").attr("class");
             match3 = filterMatch(match3);
-            let match4 = $(el).find(" span:nth-child(4)").attr("class");
+            let match4=''; 
+            match4 = $(el).find(" span:nth-child(5)").attr("class");
             match4 = filterMatch(match4);
-            let match5 = $(el).find(" span:nth-child(5)").attr("class");
+            let match5=''; 
+            match5 = $(el).find(" span:nth-child(6)").attr("class");
             match5 = filterMatch(match5);
             scores.push({
               teamName,

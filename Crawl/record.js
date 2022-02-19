@@ -14,8 +14,8 @@ const record = () => {
         let setTitle;
         $(".statsCard").each((index, el) => {
           let data = [];
-          if (index <= 3 || index==17 || index==16) {
-            
+          if (index <= 2 || index==17 || index==13 ) {
+             
               const title = $(el).find(".statsTitle").find("a").text();
               const position = $(el).find(".statsHero").find(".pos").text();
               const name = $(el).find(".statsHero").find(".statName").text();

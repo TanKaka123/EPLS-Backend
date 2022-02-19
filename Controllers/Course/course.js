@@ -9,30 +9,15 @@ const getAll = require('./getAllCourse');
   
 const getOne = require('./getOneCourse');
 
-  const update = (req,res)=>{
-      const id=req.params.courseId;
-      const updateObject = req.body;
-      Course.update({id:id},{$set:updateObject})
-      .exec()
-      .then(()=>{
-          res.status(200).json({
-              success:true,
-              message:'update success',
-              update : updateObject,
-          });
-      })
-      .catch(()=>{
-        res.status(500).json({
-            success: false,
-            message: 'Server error. Please try again.'
-          });
-      })
-  }
+const update= require('./updateCourse');
 
- const course ={
+const deleteOne = require('./deleteOneCourses');
+
+const course ={
     'create' : create,
     'getAll': getAll,
     'getOne':getOne,
     'update':update,
+    'deleteOne':deleteOne,
   }
   module.exports = course;

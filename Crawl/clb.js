@@ -21,6 +21,7 @@ const getCLB = async () => {
               .find(".indexBadge")
               .find(".badge-image--70")
               .attr("src");
+           
   
             data.push({
               teamName,
