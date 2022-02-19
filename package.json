@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js --ignore Data/*.json --ignore Data/Record/*.json"
+    "start": "nodemon app.js --ignore Data/*.json --ignore Data/Record/*.json",
+    "start:dev": "nodemon app.js --ignore Data/*.json --ignore Data/Record/*.json"
   },
   "repository": {
     "type": "git",
