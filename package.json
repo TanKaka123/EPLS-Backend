@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js --ignore Data/*.json --ignore Data/Record/*.json",
-    "start:dev": "node app.js --ignore Data/*.json --ignore Data/Record/*.json"
-
+    "start": "node app.js --ignore Data/*.json --ignore Data/Record/*.json"
   },
   "repository": {
     "type": "git",
@@ -29,9 +27,6 @@
     "morgan": "^1.10.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
-     
   },
-  "devDependencies": {
-  
-  }
+  "devDependencies": {}
 }
