@@ -2,7 +2,7 @@ const cheerio = require("cheerio");
 const request = require("request-promise");
 const fs = require("fs");
 
-const getManager=()=>{
+const getManager = () => {
   request(
     "https://www.bettingodds.com/thesackrace/managers/premier-league",
     (error, response, html) => {
@@ -22,44 +22,54 @@ const getManager=()=>{
             .find("div:nth-child(4)")
             .find("div:nth-child(2)")
             .text();
-          const avtManager ='https://www.bettingodds.com/'+ $(el).find('.person-ico-wrapper').attr('style').replace('background-image: url(','').replace(');','');     
-          infoManager.push({ managerName,avtManager, team, age, timeAtClb });
+          const avtManager =
+            "https://www.bettingodds.com/" +
+            $(el)
+              .find(".person-ico-wrapper")
+              .attr("style")
+              .replace("background-image: url(", "")
+              .replace(");", "");
+          infoManager.push({ managerName, avtManager, team, age, timeAtClb });
           fs.writeFileSync("./Data/managers.json", JSON.stringify(infoManager));
         });
-      } else { 
+      } else {
         console.log(error);
       }
-    } 
-  );   
-} 
-getManager();
-   
+    }
+  );
+  let month = 2629743830;
 
-  // const listManager = require("../Data/manager.json");
-  // const dataManager = [];
-  // listManager.forEach((e) => {
-  //   request(
-  //     `https://www.bettingodds.com/thesackrace/managers/${e.managerName
-  //       .replace(" ", "-")
-  //       .toLowerCase()}`,
-  //     (error, response, html) => {
-  //       let nationality = [];
-  //       if (!error && response.statusCode == 200) {
-  //         const $ = cheerio.load(html);
-  //         const national = $(".sackrace-profile-manager-upper")
-  //           .find("div:nth-child(5)")
-  //           .find("div:nth-child(2)")
-  //           .text();
-  
-  //         nationality.push(national);
-  //         dataManager.push({ ...e, national });
-  
-  //       } else {
-  //         console.log(error);
-  //       }
-  //       nationality = { ...nationality };
-  //       fs.writeFileSync("./Data/manager.json", JSON.stringify(dataManager));
-  //     }
-  //   );
-  // });
-    
+  setInterval(() => {
+    const handleManagerApi = require("../utils/handleManager");
+    handleManagerApi;
+  }, month);
+};
+getManager();
+
+// const listManager = require("../Data/manager.json");
+// const dataManager = [];
+// listManager.forEach((e) => {
+//   request(
+//     `https://www.bettingodds.com/thesackrace/managers/${e.managerName
+//       .replace(" ", "-")
+//       .toLowerCase()}`,
+//     (error, response, html) => {
+//       let nationality = [];
+//       if (!error && response.statusCode == 200) {
+//         const $ = cheerio.load(html);
+//         const national = $(".sackrace-profile-manager-upper")
+//           .find("div:nth-child(5)")
+//           .find("div:nth-child(2)")
+//           .text();
+
+//         nationality.push(national);
+//         dataManager.push({ ...e, national });
+
+//       } else {
+//         console.log(error);
+//       }
+//       nationality = { ...nationality };
+//       fs.writeFileSync("./Data/manager.json", JSON.stringify(dataManager));
+//     }
+//   );
+// });

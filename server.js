@@ -61,10 +61,10 @@ setInterval(()=>{
   getCLB;
   const getManager = require("./Crawl/manager");
   getManager;
-  const handleClbApi = require('./utils/handleClb');
-  handleClbApi
-  const handleManagerApi = require('./utils/handleManager');
-  handleManagerApi
+  // const handleClbApi = require('./utils/handleClb');
+  // handleClbApi
+  // const handleManagerApi = require('./utils/handleManager');
+  // handleManagerApi
 },month);
 
 
@@ -77,10 +77,10 @@ setInterval(()=>{
   const getRecord = require("./Crawl/record");
   getRecord;
 
-  const handleRecordApi = require('./utils/handleRecord');    
-  handleRecordApi
-  const handleScoresApi = require('./utils/handleScores'); 
-  handleScoresApi
+  // const handleRecordApi = require('./utils/handleRecord');    
+  // handleRecordApi
+  // const handleScoresApi = require('./utils/handleScores'); 
+  // handleScoresApi
 },twelveHour);
 
 // // 1 tháng
