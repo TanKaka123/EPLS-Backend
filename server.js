@@ -36,13 +36,14 @@ app.listen(port, (request, respond) => {
 
 mongoose
   .connect(process.env.DB_CONNECTION, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("Database connected");
   })
   .catch((error) => {
-    console.log("Error connecting to database");
+    console.log("Error connecting to database : ", error);
   });
 
 
