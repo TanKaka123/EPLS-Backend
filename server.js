@@ -10,7 +10,9 @@ const recordRoutes = require('./Routes/record');
 const port =process.env.PORT ||  3000;
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
+const cors = require('cors');
 
+app.use(cors());
 // Call in installed dependencies
 const express = require("express");
 // set up express app
