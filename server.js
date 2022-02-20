@@ -54,17 +54,15 @@ mongoose
 // // console.log(a[4]);
 
  
-const month=2629743830;
+let month=2629743830;
 
 setInterval(()=>{
   const getCLB = require("./Crawl/clb");
   getCLB;
-},month);
-
-setInterval(()=>{
   const getManager = require("./Crawl/manager");
   getManager;
 },month);
+
 
 // // 12 tháng
 const twelveHour=43200000;
@@ -78,17 +76,16 @@ setInterval(()=>{
 
 // // 1 tháng
 
+month=month+60000;
+setInterval(()=>{
+  const handleClbApi = require('./utils/handleClb');
+  const handleManagerApi = require('./utils/handleManager');
+},month);
 
-// setInterval(()=>{
-//   const handleClbApi = require('./utils/handleClb');
-// },month+60000);
 
-// setInterval(()=>{
-//   const handleManagerApi = require('./utils/handleManager');
-// },month+60000);
-
+twelveHour=twelveHour+60000;
 // // 12 tháng
-// setInterval(()=>{
-//   const handleRecordApi = require('./utils/handleRecord');    
-//   const handleScoresApi = require('./utils/handleScores'); 
-// },twelveHour);
+setInterval(()=>{
+  const handleRecordApi = require('./utils/handleRecord');    
+  const handleScoresApi = require('./utils/handleScores'); 
+},twelveHour);
