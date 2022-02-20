@@ -30,44 +30,6 @@ app.use('/api/',recordRoutes);
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
 });
-
-setInterval(()=>{
-  const getCLB = require("./Crawl/clb");
-  getCLB;
-},month);
-
-setInterval(()=>{
-  const getManager = require("./Crawl/manager");
-  getManager;
-},month);
-
-// // 12 tháng
-const twelveHour=43200000;
-setInterval(()=>{
-  const getScores = require("./Crawl/scores");
-  getScores;
-  
-  const getRecord = require("./Crawl/record");
-  getRecord;
-},twelveHour);
-
-// 1 tháng
-
-
-setInterval(()=>{
-  const handleClbApi = require('./utils/handleClb');
-},month+60000);
-
-setInterval(()=>{
-  const handleManagerApi = require('./utils/handleManager');
-},month+60000);
-
-// 12 tháng
-setInterval(()=>{
-  const handleRecordApi = require('./utils/handleRecord');    
-  const handleScoresApi = require('./utils/handleScores'); 
-},twelveHour);
-
 app.listen(port, (request, respond) => {
   console.log(`Our server is live on ${port}. Yay!`);
 });
@@ -92,5 +54,41 @@ mongoose
 // // console.log(a[4]);
 
  
-// const month=2629743830;
+const month=2629743830;
 
+setInterval(()=>{
+  const getCLB = require("./Crawl/clb");
+  getCLB;
+},month);
+
+setInterval(()=>{
+  const getManager = require("./Crawl/manager");
+  getManager;
+},month);
+
+// // 12 tháng
+// const twelveHour=43200000;
+// setInterval(()=>{
+//   const getScores = require("./Crawl/scores");
+//   getScores;
+  
+//   const getRecord = require("./Crawl/record");
+//   getRecord;
+// },twelveHour);
+
+// // 1 tháng
+
+
+// setInterval(()=>{
+//   const handleClbApi = require('./utils/handleClb');
+// },month+60000);
+
+// setInterval(()=>{
+//   const handleManagerApi = require('./utils/handleManager');
+// },month+60000);
+
+// // 12 tháng
+// setInterval(()=>{
+//   const handleRecordApi = require('./utils/handleRecord');    
+//   const handleScoresApi = require('./utils/handleScores'); 
+// },twelveHour);
