@@ -37,12 +37,12 @@ const getManager = () => {
       }
     }
   );
-  let month = 2629743830;
+  // let month = 2629743830;
 
-  setInterval(() => {
-    const handleManagerApi = require("../utils/handleManager");
-    handleManagerApi;
-  }, month);
+  // setInterval(() => {
+  //   const handleManagerApi = require("../utils/handleManager");
+  //   handleManagerApi;
+  // }, month);
 };
 getManager();
 

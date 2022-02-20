@@ -35,12 +35,12 @@ const getCLB = async () => {
       }
     }
   );
-  let month = 2629743830+60000;
+  // let month = 2629743830+60000;
 
-  setInterval(() => {
-    const handleClbApi = require('../utils/handleClb');
-    handleClbApi
-  }, month);
+  // setInterval(() => {
+  //   const handleClbApi = require('../utils/handleClb');
+  //   handleClbApi
+  // }, month);
 };
 
 getCLB();
