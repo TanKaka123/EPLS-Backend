@@ -8,6 +8,7 @@ const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
 // const cors = require('cors');
 const port =process.env.PORT ||  3000;
+const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
 // Call in installed dependencies
