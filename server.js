@@ -67,14 +67,14 @@ setInterval(()=>{
 },month);
 
 // // 12 tháng
-// const twelveHour=43200000;
-// setInterval(()=>{
-//   const getScores = require("./Crawl/scores");
-//   getScores;
+const twelveHour=43200000;
+setInterval(()=>{
+  const getScores = require("./Crawl/scores");
+  getScores;
   
-//   const getRecord = require("./Crawl/record");
-//   getRecord;
-// },twelveHour);
+  const getRecord = require("./Crawl/record");
+  getRecord;
+},twelveHour);
 
 // // 1 tháng
 
