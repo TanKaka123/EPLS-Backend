@@ -76,16 +76,14 @@ setInterval(()=>{
 
 // // 1 tháng
 
-month=month+60000;
+
 setInterval(()=>{
   const handleClbApi = require('./utils/handleClb');
   const handleManagerApi = require('./utils/handleManager');
-},month);
+},2629793830);
 
-
-twelveHour=twelveHour+60000;
 // // 12 tháng
 setInterval(()=>{
   const handleRecordApi = require('./utils/handleRecord');    
   const handleScoresApi = require('./utils/handleScores'); 
-},twelveHour);
+},43260000);
