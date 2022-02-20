@@ -7,8 +7,8 @@ const ManagerRoutes=require('./Routes/manager');
 const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
 // const cors = require('cors');
-require("dotenv/config");
 const port =process.env.PORT ||  3000;
+dotenv.config({ path: './config.env' });
 
 // Call in installed dependencies
 const express = require("express");
