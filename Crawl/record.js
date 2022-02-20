@@ -75,11 +75,11 @@ const record = () => {
       }
     }
   );
-  // const twelveHour = 43200000 + 60000;
-  // setInterval(() => {
-  //   const handleRecordApi = require("./utils/handleRecord");
-  //   handleRecordApi;
-  // }, twelveHour);
+  const twelveHour = 43200000 + 60000;
+  setInterval(() => {
+    const handleRecordApi = require("./utils/handleRecord");
+    handleRecordApi;
+  }, twelveHour);
 };
 
 record();
