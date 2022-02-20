@@ -8,6 +8,7 @@ const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
 
 require("dotenv/config");
+const port =process.env.PORT ||  3000;
 
 // Call in installed dependencies
 const express = require("express");
@@ -22,11 +23,10 @@ app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
 // set up port number
-const port =process.env.PORT ||  3000;
 // set up home route
-app.get("/", (req, res) => {
-  res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
-});
+// app.get("/", (req, res) => {
+//   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
+// });
 app.listen(port, (request, respond) => {
   console.log(`Our server is live on ${port}. Yay!`);
 });
@@ -47,8 +47,8 @@ mongoose
 
 
 
-// const a=require('./Data/team.json'); 
-// console.log(a[4]);
+// // const a=require('./Data/team.json'); 
+// // console.log(a[4]);
 
  
 // const month=2629743830;
