@@ -6,7 +6,7 @@ const logger = require("morgan");
 const ManagerRoutes=require('./Routes/manager');
 const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
-
+const cors = require('cors');
 require("dotenv/config");
 const port =process.env.PORT ||  3000;
 
