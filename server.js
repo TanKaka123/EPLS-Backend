@@ -30,31 +30,6 @@ app.use('/api/',recordRoutes);
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
 });
-app.listen(port, (request, respond) => {
-  console.log(`Our server is live on ${port}. Yay!`);
-});
-
-mongoose
-  .connect(process.env.DB_CONNECTION, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Database connected");
-  })
-  .catch((error) => {
-    console.log("Error connecting to database : ", error);
-  });
-
-
-
-
-
-// // const a=require('./Data/team.json'); 
-// // console.log(a[4]);
-
- 
-// const month=2629743830;
 
 setInterval(()=>{
   const getCLB = require("./Crawl/clb");
@@ -92,3 +67,30 @@ setInterval(()=>{
   const handleRecordApi = require('./utils/handleRecord');    
   const handleScoresApi = require('./utils/handleScores'); 
 },twelveHour);
+
+app.listen(port, (request, respond) => {
+  console.log(`Our server is live on ${port}. Yay!`);
+});
+
+mongoose
+  .connect(process.env.DB_CONNECTION, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Database connected");
+  })
+  .catch((error) => {
+    console.log("Error connecting to database : ", error);
+  });
+
+
+
+
+
+// // const a=require('./Data/team.json'); 
+// // console.log(a[4]);
+
+ 
+// const month=2629743830;
+
