@@ -21,15 +21,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger("dev"));
 app.use("/api", mainRoutes);
-// app.use("/api/", clbRoutes);
-// app.use("/api/", ManagerRoutes);
-// app.use('/api/',scoresRoutes);
-// app.use('/api/',recordRoutes);
+app.use("/api/", clbRoutes);
+app.use("/api/", ManagerRoutes);
+app.use('/api/',scoresRoutes);
+app.use('/api/',recordRoutes);
 // set up port number
 // set up home route
-// app.get("/", (req, res) => {
-//   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
-// });
+app.get("/", (req, res) => {
+  res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
+});
 app.listen(port, (request, respond) => {
   console.log(`Our server is live on ${port}. Yay!`);
 });
