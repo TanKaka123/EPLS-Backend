@@ -1,12 +1,12 @@
 const axios = require("axios");
 
 const handleRecordApi = () => {
-  axios.get("http://localhost:3000/api/records").then(function (response) {
+  axios.get("https://eplscores.herokuapp.com/api/records").then(function (response) {
     // handle success
     response.data.Record.forEach((e) => {
       console.log(e._id);
       axios
-        .delete(`http://localhost:3000/api/records/${e._id}`)
+        .delete(`https://eplscores.herokuapp.com/api/records/${e._id}`)
         .then(console.log("success!!"))
         .catch(function (error) {
           console.log("error");
@@ -20,7 +20,7 @@ const handleRecordApi = () => {
     const team = require(`..//Data/Record/${name}.json`);
     team.forEach((e) => {
       axios
-        .post("http://localhost:3000/api/records", {
+        .post("https://eplscores.herokuapp.com/api/records", {
           title: e.title,
           position: e.position,
           name: e.name,

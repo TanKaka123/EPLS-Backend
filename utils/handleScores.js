@@ -1,12 +1,12 @@
 const axios = require("axios");
 
 const handleScoresdApi = () => {
-  axios.get("http://localhost:3000/api/scores").then(function (response) {
+  axios.get("https://eplscores.herokuapp.com/api/scores").then(function (response) {
     // handle success
     response.data.Scores.forEach((e) => {
       console.log(e._id);
       axios
-        .delete(`http://localhost:3000/api/scores/${e._id}`)
+        .delete(`https://eplscores.herokuapp.com/api/scores/${e._id}`)
         .then(console.log("success!!"))
         .catch(function (error) {
           console.log('error');
@@ -17,7 +17,7 @@ const handleScoresdApi = () => {
   const scores = require("../Data/scores.json");
   scores.forEach((e) => {
     axios
-      .post("http://localhost:3000/api/scores", {
+      .post("https://eplscores.herokuapp.com/api/scores", {
         teamName: e.teamName,
         score: {
           PI: e.PI,
