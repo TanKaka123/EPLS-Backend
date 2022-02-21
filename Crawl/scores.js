@@ -71,8 +71,3 @@ const filterMatch = (match) => {
     }
   );
 
-const haftHour=1800000;
-setInterval(()=>{
-  const handleScoresApi = require('../utils/handleScores'); 
-  handleScoresApi
-},haftHour);

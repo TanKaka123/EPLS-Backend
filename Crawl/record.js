@@ -75,11 +75,7 @@ const record = () => {
       }
     }
   );
-  const oneHour=3600000;
-  setInterval(() => {
-    const handleRecordApi = require("./utils/handleRecord");
-    handleRecordApi;
-  }, oneHour);
+ 
 };
 
 record();
