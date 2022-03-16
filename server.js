@@ -13,7 +13,7 @@ dotenv.config({ path: './config.env' });
 const cors = require('cors');
 // const cors = require('cors');
 
-// app.use(cors());
+app.use(cors());
 // Call in installed dependencies
 const express = require("express");
 // set up express app
@@ -27,7 +27,7 @@ app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
 // set up port number
-app.use(cors());
+//app.use(cors());
 // set up home route
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
