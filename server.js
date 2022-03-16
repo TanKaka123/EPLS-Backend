@@ -10,6 +10,7 @@ const recordRoutes = require('./Routes/record');
 const port =process.env.PORT ||  3000;
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
+const cors = require('cors');
 // const cors = require('cors');
 
 // app.use(cors());
@@ -26,6 +27,7 @@ app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
 // set up port number
+app.use(cors());
 // set up home route
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
