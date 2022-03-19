@@ -6,18 +6,18 @@ const logger = require("morgan");
 const ManagerRoutes=require('./Routes/manager');
 const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
+const cors = require('cors');
+
+
 // const cors = require('cors');
 const port =process.env.PORT ||  3000;
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
-const cors = require('cors');
-// const cors = require('cors');
 
-app.use(cors());
-// Call in installed dependencies
 const express = require("express");
 // set up express app
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger("dev"));
@@ -26,9 +26,7 @@ app.use("/api/", clbRoutes);
 app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
-// set up port number
-//app.use(cors());
-// set up home route
+
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
 });
