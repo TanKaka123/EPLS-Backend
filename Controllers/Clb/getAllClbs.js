@@ -10,7 +10,7 @@ module.exports=(req, res)=>
         success: true,
         message: 'A list of all CLUB',
         length: allClb.length,
-        Clb: allClb,
+        data: allClb,
       });
     })
     .catch((err) => {
