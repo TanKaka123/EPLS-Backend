@@ -10,7 +10,7 @@ module.exports=(req, res)=>
         success: true,
         message: 'A list of top 7 team in EPL',
         length:allScores.length,
-        Scores: allScores,
+        data: allScores,
       });
     })
     .catch((err) => {

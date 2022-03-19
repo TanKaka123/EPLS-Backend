@@ -9,7 +9,7 @@ module.exports=(req, res)=>
       return res.status(200).json({
         success: true,
         message: 'A list of all course',
-        Course: allCourse,
+        data: allCourse,
       });
     })
     .catch((err) => {

@@ -10,7 +10,7 @@ module.exports=(req, res)=>
         success: true,
         message: 'A list of all Records',
         length:allRecords.length,
-        Record: allRecords,
+        data: allRecords,
       });
     })
     .catch((err) => {

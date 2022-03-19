@@ -31,7 +31,7 @@ module.exports= (req, res)=>
         return res.status(201).json({
           success: true,
           message: 'New created successfully',
-          Scores: newRecord,
+          data: newRecord,
         });
       })
       .catch((error) => {

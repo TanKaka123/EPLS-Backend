@@ -10,7 +10,7 @@ module.exports=(req, res)=>
         success: true,
         message: 'A list of all Manager',
         length:allManagers.length,
-        Manager: allManagers,
+        data: allManagers,
       });
     })
     .catch((err) => {

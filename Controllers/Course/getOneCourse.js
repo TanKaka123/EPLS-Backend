@@ -9,7 +9,7 @@ module.exports = (req, res)=>
       res.status(200).json({
         success: true,
         message: `More on ${singleCourse.title}`,
-        Course: singleCourse,
+        data: singleCourse,
       });
     })
     .catch((err) => {
