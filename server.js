@@ -6,6 +6,7 @@ const logger = require("morgan");
 const ManagerRoutes=require('./Routes/manager');
 const scoresRoutes = require('./Routes/scores');
 const recordRoutes = require('./Routes/record');
+const playerRoutes = require('./Routes/player');
 const cors = require('cors');
 
 
@@ -26,6 +27,7 @@ app.use("/api/", clbRoutes);
 app.use("/api/", ManagerRoutes);
 app.use('/api/',scoresRoutes);
 app.use('/api/',recordRoutes);
+app.use('/api/',playerRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
