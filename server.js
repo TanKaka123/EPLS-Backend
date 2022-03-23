@@ -71,33 +71,33 @@ mongoose
 
 
 // // 12 tháng
-const twelveHour=500000;
-setInterval(()=>{
-  const getScores = require("./Crawl/scores");
-  getScores;
+// const twelveHour=500000;
+// setInterval(()=>{
+//   const getScores = require("./Crawl/scores");
+//   getScores;
   
-  const getRecord = require("./Crawl/record");
-  getRecord;
+//   const getRecord = require("./Crawl/record");
+//   getRecord;
 
-  // const handleRecordApi = require('./utils/handleRecord');    
-  // handleRecordApi
-  // const handleScoresApi = require('./utils/handleScores'); 
-  // handleScoresApi
-},twelveHour);
+//   // const handleRecordApi = require('./utils/handleRecord');    
+//   // handleRecordApi
+//   // const handleScoresApi = require('./utils/handleScores'); 
+//   // handleScoresApi
+// },twelveHour);
 
 // // 1 tháng
 
 
 
-const haftHour=600000;
-setInterval(()=>{
-  const handleScoresApi = require('./utils/handleScores'); 
-  handleScoresApi
-},haftHour); 
-// // 12 tháng
+// const haftHour=600000;
+// setInterval(()=>{
+//   const handleScoresApi = require('./utils/handleScores'); 
+//   handleScoresApi
+// },haftHour); 
+// // // 12 tháng
 
-const oneHour=3600000;
-setInterval(() => {
-  const handleRecordApi = require("./utils/handleRecord");
-  handleRecordApi;
-}, oneHour);
+// const oneHour=3600000;
+// setInterval(() => {
+//   const handleRecordApi = require("./utils/handleRecord");
+//   handleRecordApi;
+// }, oneHour);
