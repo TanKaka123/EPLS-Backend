@@ -20,6 +20,10 @@ const playerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  nationality: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Players", playerSchema);

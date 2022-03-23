@@ -9,6 +9,7 @@ module.exports= (req, res)=>
       avtPlayer: req.body.avtPlayer,
       role: req.body.role,
       team: req.body.team,
+      nationality: req.body.nationality,
     });
     
     return player

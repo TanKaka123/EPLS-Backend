@@ -4,7 +4,7 @@ const Player = require( '../../Models/player');
 module.exports=(req, res)=> 
 {
   Player.find()
-    .select(' _id playerName avtPlayer role team')
+    .select(' _id playerName avtPlayer role team nationality')
     .then((allPlayers) => {
       return res.status(200).json({
         success: true,
