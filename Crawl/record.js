@@ -79,28 +79,3 @@ const record = () => {
 };
 
 record();
-
-{
-  /* <li class="statsHero  ">
-    <div class="statInfo">
-      <div class="pos">1.</div>
-        <a href="/players/5178/Mohamed-Salah/overview" class="statName">Mohamed<br>Salah Ghaly</a>
-
-        <a href="/clubs/10/Liverpool/overview" class="statNameSecondary">Liverpool</a>
-
-      <div class="stat">
-          16
-      </div>
-    </div>
-        <div class="heroBadgeContainer">
-          <div class="statsBadge">
-            <div class="badge badge-image-container" data-widget="club-badge-image" data-size="25">
-                <img class="badge-image badge-image--25 js-badge-image" src="https://resources.premierleague.com/premierleague/badges/25/t14.png" srcset="https://resources.premierleague.com/premierleague/badges/25/t14@x2.png 2x"  />
-            </div>
-          </div>
-        </div>
-    <div class="imgCropContainer">
-      <img  data-script="pl_player-image" data-widget="player-image" data-player="p118748" data-size="110x140"  class="img statCardImg" src="//resources.premierleague.com/premierleague/photos/players/110x140/Photo-Missing.png" alt="Photo for Mohamed Salah">
-    </div>
-  </li> */
-}

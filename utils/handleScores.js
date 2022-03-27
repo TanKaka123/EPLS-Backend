@@ -17,7 +17,8 @@ const handleScoresdApi = () => {
 
   const scores = require("../Data/scores.json");
   scores.forEach((e) => {
-    axios
+    setTimeout(()=>{
+      axios
       .post("https://eplscores.herokuapp.com/api/scores", {
         teamName: e.teamName,
         score: {
@@ -43,6 +44,8 @@ const handleScoresdApi = () => {
       .catch(function (error) {
         console.log("error");
       });
+    },1000)
+   
   });
 };
 
