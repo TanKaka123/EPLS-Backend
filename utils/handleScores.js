@@ -3,7 +3,7 @@ const axios = require("axios");
 const handleScoresdApi = () => {
   axios.get("https://eplscores.herokuapp.com/api/scores").then(function (response) {
     // handle success
-    response.data.Scores.forEach((e) => {
+    response.data.data.forEach((e) => {
       console.log(e._id);
       axios
         .delete(`https://eplscores.herokuapp.com/api/scores/${e._id}`)
@@ -12,6 +12,7 @@ const handleScoresdApi = () => {
           console.log('error');
         });
     });
+    console.log(response.data.data)
   });
 
   const scores = require("../Data/scores.json");

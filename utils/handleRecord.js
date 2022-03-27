@@ -3,7 +3,7 @@ const axios = require("axios");
 const handleRecordApi = () => {
   axios.get("https://eplscores.herokuapp.com/api/records").then(function (response) {
     // handle success
-    response.data.Record.forEach((e) => {
+    response.data.data.forEach((e) => {
       console.log(e._id);
       axios
         .delete(`https://eplscores.herokuapp.com/api/records/${e._id}`)
