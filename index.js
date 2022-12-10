@@ -7,6 +7,8 @@ const ManagerRoutes = require("./Routes/manager");
 const scoresRoutes = require("./Routes/scores");
 const recordRoutes = require("./Routes/record");
 const playerRoutes = require("./Routes/player");
+const postRoutes = require("./Routes/post");
+const accountRoutes = require("./Routes/account");
 const cors = require("cors");
 
 // const cors = require('cors');
@@ -27,6 +29,8 @@ app.use("/api/", ManagerRoutes);
 app.use("/api/", scoresRoutes);
 app.use("/api/", recordRoutes);
 app.use("/api/", playerRoutes);
+app.use("/api/", postRoutes);
+app.use("/api/", accountRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
