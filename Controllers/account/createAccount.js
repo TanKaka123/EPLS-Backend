@@ -4,7 +4,7 @@ const Account = require("../../Models/account");
 module.exports = (req, res) => {
   const accounts = new Account({
     _id: mongoose.Types.ObjectId(),
-    lastName: req.body.imgTeam,
+    lastName: req.body.lastName,
     firstName: req.body.firstName,
     userName: req.body.userName,
     password: req.body.password,
