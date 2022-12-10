@@ -17,7 +17,6 @@ const manager ={
     'getAll': getAll,
     'getOne':getOne,
     'update':update,
-
     'deleteOne':deleteOne,
   }
   module.exports = manager;
