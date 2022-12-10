@@ -24,13 +24,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger("dev"));
 app.use("/api", mainRoutes);
-app.use("/api/", clbRoutes);
-app.use("/api/", ManagerRoutes);
-app.use("/api/", scoresRoutes);
-app.use("/api/", recordRoutes);
-app.use("/api/", playerRoutes);
-app.use("/api/", postRoutes);
-app.use("/api/", accountRoutes);
+app.use("/api", clbRoutes);
+app.use("/api", ManagerRoutes);
+app.use("/api", scoresRoutes);
+app.use("/api", recordRoutes);
+app.use("/api", playerRoutes);
+app.use("/api", postRoutes);
+app.use("/api", accountRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).send("<a>Hello World, This is Backend of project EPLS</a>");
