@@ -3,7 +3,7 @@ const Account = require( '../../Models/account');
 module.exports = (req, res)=> 
 {
   const id = req.params.id;
-  Account.finOne({_id:id})
+  Account.findById(id)
     .then((singleAccount) => {
       res.status(200).json({
         success: true,

@@ -8,7 +8,11 @@ const clbSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  bookAvatart: {
+  bookAvatar: {
+    type: String,
+    required: true,
+  },
+  nameAuthor:{
     type: String,
     required: true,
   },

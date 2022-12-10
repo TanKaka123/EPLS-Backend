@@ -3,7 +3,7 @@ const Post = require( '../../Models/post');
 module.exports=(req, res)=> 
 {
   Post.find()
-    .select('_id  nameBook  bookAvatart  idAuthor  shortDescription  longDescription  listReact')
+    .select('_id  nameBook  bookAvatar  nameAuthor  idAuthor  shortDescription  longDescription  listReact')
     .then((listPost) => {
       return res.status(200).json({
         success: true,

@@ -5,7 +5,8 @@ module.exports = (req, res) => {
   const posts = new Post({
     _id: mongoose.Types.ObjectId(),
     nameBook: req.body.nameBook,
-    bookAvatart: req.body.bookAvatart,
+    bookAvatar: req.body.bookAvatart,
+    nameAuthor: req.body.nameAuthor,
     idAuthor: req.body.idAuthor,
     shortDescription: req.body.shortDescription,
     longDescription: req.body.longDescription,
