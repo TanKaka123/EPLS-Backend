@@ -51,23 +51,6 @@ mongoose
     console.log("Error connecting to database : ", error);
   });
 
-// // const a=require('./Data/team.json');
-// // console.log(a[4]);
-
-// let month=1800;
-
-// setInterval(()=>{
-//   const getCLB = require("./Crawl/clb");
-//   getCLB;
-//   const getManager = require("./Crawl/manager");
-//   getManager;
-//   // const handleClbApi = require('./utils/handleClb');
-//   // handleClbApi
-//   // const handleManagerApi = require('./utils/handleManager');
-//   // handleManagerApi
-// },month);
-
-// // 12 tháng
 const twelveHour = 500000;
 setInterval(() => {
   const getScores = require("./Crawl/scores");
@@ -81,18 +64,3 @@ setInterval(() => {
   const handleRecordApi = require("./utils/handleRecord");
   handleRecordApi;
 }, twelveHour);
-
-// // 1 tháng
-
-// const haftHour=600000;
-// setInterval(()=>{
-//   const handleScoresApi = require('./utils/handleScores');
-//   handleScoresApi
-// },haftHour);
-// // // 12 tháng
-
-// const oneHour=3600000;
-// setInterval(() => {
-//   const handleRecordApi = require("./utils/handleRecord");
-//   handleRecordApi;
-// }, oneHour);
