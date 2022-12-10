@@ -69,19 +69,19 @@ mongoose
 // },month);
 
 // // 12 tháng
-const twelveHour = 500000;
-setInterval(() => {
-  const getScores = require("./Crawl/scores");
-  getScores;
+// const twelveHour = 500000;
+// setInterval(() => {
+//   const getScores = require("./Crawl/scores");
+//   getScores;
 
-  const handleScoresApi = require("./utils/handleScores");
-  handleScoresApi;
-  const getRecord = require("./Crawl/record");
-  getRecord;
+//   const handleScoresApi = require("./utils/handleScores");
+//   handleScoresApi;
+//   const getRecord = require("./Crawl/record");
+//   getRecord;
 
-  const handleRecordApi = require("./utils/handleRecord");
-  handleRecordApi;
-}, twelveHour);
+//   const handleRecordApi = require("./utils/handleRecord");
+//   handleRecordApi;
+// }, twelveHour);
 
 // // 1 tháng
 
